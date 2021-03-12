@@ -1,0 +1,315 @@
+.nav_toggle {
+  display: block;
+  position: relative;
+  width: 1.75rem;
+  height: 1.5rem;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  transition: transform .5s, opacity .5s;
+}
+.nav_toggle i:nth-child(1) {
+  top: 0;
+}
+.nav_toggle i:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.nav_toggle i:nth-child(3) {
+  bottom: 0;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 5;
+}
+
+header h1{
+  margin-left: 40px;
+}
+
+header .nav_toggle{
+  right: 45px;
+}
+
+nav{
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background-color: #121212;
+  transition: all 1s;
+  position: fixed;
+  z-index: 100;
+}
+
+.slide-nav{
+  left: -300px;
+}
+
+nav ul{
+  padding: 0 25px;
+  margin-top: 60px;
+}
+
+nav ul a{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.page-nav li{
+  padding: 25px 0;
+  width: 100%;
+  border-top: 1px #fff solid;
+  border-bottom: solid 1px #fff;
+}
+
+.sns-nav li{
+  padding: 10px 0;
+}
+
+.nav_toggle.show i:nth-child(1) {
+  transform: translateY(10px) rotate(-45deg);
+}
+.nav_toggle.show i:nth-child(2) {
+  opacity: 0;
+}
+.nav_toggle.show i:nth-child(3) {
+  transform: translateY(-12px) rotate(45deg);
+}
+
+.movie video{
+  width: 100%;
+  padding-top: 80px;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+h2{
+  font-size: 36px;
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 45px;
+  font-weight: bold;
+}
+
+.slider{
+  display: flex;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slider li{
+  width: 265px;
+  height: 175px;
+  margin: 0 30px;
+  box-sizing: border-box;
+}
+
+.slider img{
+  width: 100%;
+}
+
+#feature{
+  padding: 0 20px;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.grid{
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3,1fr);
+
+
+}
+
+.grid img{
+  max-width: 100%;
+}
+
+.item-content{
+  padding: 30px;
+}
+
+.item{
+  border: darkgoldenrod 0.05px solid;
+  box-shadow: 0 0 8px gray;
+}
+
+.item-content span{
+  font-size: 12px;
+}
+
+.item-content p{
+  font-size: 14.4px;
+  font-weight: bold;
+  margin: 20px 0 25px 0;
+  max-width: 312px;
+  line-height: normal;
+}
+
+.item-content time{
+  font-size: 12px;
+  float: right;
+  padding-bottom: 30px;
+}
+
+.scrollanime {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;         
+    }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
+}
+.downup {transform: translateY(100px);}
+
+footer{
+  background-color: #000;
+  color: #fff;
+}
+
+.contact{
+  padding: 0 20px;
+  max-width: 1210px;
+  margin: 0 auto;
+}
+
+.contact h2{
+  margin: 0;
+  padding: 65px 0 50px 0;
+}
+
+.contact-box{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.text{
+  max-width: 545px;
+}
+
+.text p{
+  margin-bottom: 40px;
+  line-height: normal;
+  font-size: 14.4px;
+  text-align: left;
+}
+
+form{
+  width: 45%;
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+form input{
+  width: 100%;
+  height: 45px;
+}
+
+form textarea{
+  width: 100%;
+  height: 70px;
+}
+
+form .send{
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: #fff;
+  border: #fff 1px solid;
+  transition: all 0.3s;
+}
+
+form .send:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+footer p{
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 0;
+}
